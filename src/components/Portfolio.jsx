@@ -380,7 +380,7 @@ export default function Portfolio() {
             <h1 className="text-4xl sm:text-5xl font-semibold leading-tight font-mono">
               <Glitch text="Aditya Sawant" />
             </h1>
-            <p className="mt-4 text-emerald-200/80 font-mono">Security engineer crafting small, sharp tools and clean write‑ups. This page is my lab log — not a brochure.</p>
+            <p className="mt-4 text-emerald-200/80 font-mono">Breaking, bending, and building systems to understand how they fail — and how to make them stronger.</p>
             <div className="mt-6 flex flex-wrap gap-3 font-mono text-xs">
               {["web-vapt","api","android/ios","thick-client","automation","owasp","sans"].map((t) => (
                 <span key={t} className="px-3 py-1 rounded-full border border-emerald-400/30 bg-black/30">{t}</span>
