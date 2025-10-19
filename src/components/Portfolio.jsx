@@ -389,8 +389,7 @@ export default function Portfolio() {
             <div className="mt-6 flex gap-4 text-sm font-mono">
               <a href="mailto:sawantaditya44@gmail.com" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-emerald-400/30 hover:bg-white/5"><Mail className="w-4 h-4"/>email</a>
               <a href="https://github.com/theadiy" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-emerald-400/30 hover:bg-white/5"><Github className="w-4 h-4"/>github</a>
-              <a href="www.linkedin.com/in/aditya-d-sawant
-" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-emerald-400/30 hover:bg-white/5"><Linkedin className="w-4 h-4"/>linkedin</a>
+              <a href="https://www.linkedin.com/in/aditya-d-sawant" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-emerald-400/30 hover:bg-white/5"><Linkedin className="w-4 h-4"/>linkedin</a>
             </div>
           </div>
           <Card className="overflow-hidden">
