@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TerminalSquare, Cpu, Code2, Github, Linkedin, Mail, Play, Pause, X, Sparkles, Boxes, Keyboard, Wand2 } from "lucide-react";
+import HeroFaceWireOBJ from "./HeroFaceWireOBJ";
 
 /**
  * Aditya — Hacker‑Theme Showcase (One‑Page)
@@ -374,12 +375,23 @@ export default function Portfolio() {
       </div>
 
       {/* HERO */}
+	 
       <header id="home" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
         <motion.div {...fadeUp(0)} className="grid md:grid-cols-[1.2fr_1fr] gap-10 items-center">
           <div>
-            <h1 className="text-4xl sm:text-5xl font-semibold leading-tight font-mono">
-              <Glitch text="Aditya Sawant" />
-            </h1>
+			<div className="relative inline-block">
+			  {/* Floating 3D wireframe head on LEFT */}
+			  <div
+				className="absolute top-1/2 -translate-y-1/2 left-[-220px] w-[280px] h-[280px] opacity-100 z-0 pointer-events-none"
+			  >
+				<HeroFaceWireOBJ bare />
+			  </div>
+
+			  {/* Glitch heading stays normal */}
+			  <h1 className="text-4xl sm:text-5xl font-semibold leading-tight font-mono relative z-10">
+				<Glitch text="Aditya Sawant" />
+			  </h1>
+			</div>
             <p className="mt-4 text-emerald-200/80 font-mono">Breaking, bending, and building systems to understand how they fail — and how to make them stronger.</p>
             <div className="mt-6 flex flex-wrap gap-3 font-mono text-xs">
               {["web-vapt","api","android/ios","thick-client","automation","owasp","sans"].map((t) => (
