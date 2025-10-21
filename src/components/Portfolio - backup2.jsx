@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TerminalSquare, Cpu, Code2, Github, Linkedin, Mail, Play, Pause, X, Sparkles, Boxes, Keyboard, Wand2 } from "lucide-react";
 import HeroFaceWireOBJ from "./HeroFaceWireOBJ";
-import RadarProjects from "./RadarProjects";
+
 /**
  * Aditya — Hacker‑Theme Showcase (One‑Page)
  * Focus: SHOWCASE > selling. Unique, terminal/CRT vibes, out-of-the-box animations.
@@ -416,14 +416,34 @@ export default function Portfolio() {
 
       {/* PROJECTS */}
       <section id="projects" className="mx-auto max-w-6xl px-4 py-10">
-		  <motion.h2 {...fadeUp(0)} className="font-mono text-2xl flex items-center gap-2">
-			<Boxes className="w-5 h-5 text-emerald-300" /> projects
-		  </motion.h2>
-
-		  {/* Radar + hover card */}
-		  <RadarProjects projects={PROJECTS} />
-		</section>
-
+        <motion.h2 {...fadeUp(0)} className="font-mono text-2xl flex items-center gap-2"><Boxes className="w-5 h-5 text-emerald-300"/> projects</motion.h2>
+        <div className="mt-6 grid md:grid-cols-3 gap-6">
+          {PROJECTS.map((p, i) => (
+            <motion.div key={p.id} data-id={p.id} {...fadeUp(i * 0.05)} className="group">
+              <Card>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold text-emerald-200">{p.title}</div>
+                    <p className="text-sm text-emerald-200/80 mt-1">{p.blurb}</p>
+                  </div>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                  {p.stack.map((s) => (
+                    <span key={s} className="px-2 py-0.5 rounded border border-emerald-400/30">{s}</span>
+                  ))}
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                  {p.actions.map((a) => (
+                    <button key={a} className="inline-flex items-center gap-1 px-2.5 py-1 rounded border border-emerald-400/30 hover:bg-white/5">
+                      <Code2 className="w-3.5 h-3.5"/> {a}
+                    </button>
+                  ))}
+                </div>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
       {/* SKILLS (ASCII bars) */}
       <section id="skills" className="mx-auto max-w-6xl px-4 py-10">

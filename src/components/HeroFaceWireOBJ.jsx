@@ -73,11 +73,9 @@ function ThinWireModel() {
 
   // Gentle idle motion (paused while dragging)
   const root = useRef();
-  useFrame(({ clock }) => {
-    if (!root.current || dragging.current) return;
-    const t = clock.getElapsedTime();
-    root.current.rotation.y = Math.sin(t * 0.18) * 0.18;
-    root.current.rotation.x = Math.cos(t * 0.12) * 0.06;
+  useFrame(() => {
+	  if (!root.current || dragging.current) return; // pauses while dragging
+	  root.current.rotation.y += 0.01;
   });
 
   return (
