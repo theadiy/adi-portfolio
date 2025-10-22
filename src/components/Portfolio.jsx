@@ -455,7 +455,7 @@ export default function Portfolio() {
       <section id="contact" className="mx-auto max-w-6xl px-4 py-10">
         <Card>
           <div className="grid sm:grid-cols-3 gap-4 font-mono text-sm">
-            <a href="mailto:sawantaditya44@gmail.com" className="inline-flex items-center gap-2 hover:text-emerald-300"><Mail className="w-4 h-4"/> sawantaditya44@gmail.com</a>
+            <a href="mailto:sawantaditya44@gmail.com" className="inline-flex items-center gap-2 hover:text-emerald-300"><Mail className="w-4 h-4"/>theadiy011@protonmail.com</a>
             <a href="https://github.com/theadiy" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-emerald-300"><Github className="w-4 h-4"/> github</a>
             <a href="https://www.linkedin.com/in/aditya-d-sawant" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-emerald-300"><Linkedin className="w-4 h-4"/> linkedin</a>
           </div>
